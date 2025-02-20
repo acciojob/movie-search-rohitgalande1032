@@ -38,11 +38,13 @@ const App = () => {
   return (
     <MovieContext.Provider value={{movies}}>
     <div>
+      <form onSubmit={handleClick}>
       <div>
         <label htmlFor="movie-search">Search movie</label><br />
         <input value={movieName} onChange={handleMovieChange} type="text" id="movie-search" />
         <button onClick={handleClick}>Search</button>
       </div>
+      </form>
 
       
       <Movies />
